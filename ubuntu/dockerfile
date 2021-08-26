@@ -1,0 +1,18 @@
+FROM ubuntu:latest
+
+LABEL "made"="OSJ"
+
+RUN apt-get update
+RUN DEBIAN_FRONTEND="noninteractive" apt-get -y install tzdata
+RUN apt-get install apache2 -y 
+RUN echo "package install Finish"
+
+ADD index.html /var/www/html/
+
+WORKDIR /var/www/html/
+
+RUN ["/bin/bash", "-c", "echo hello > test.html"]
+
+EXPOSE 80
+
+CMD apachectl -DFOREGROUND
