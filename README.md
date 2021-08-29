@@ -20,7 +20,14 @@ Docker file에서는 여러가지 명령어 옵션이 존재한다.
 ``` RUN apt-get install update ```
 
 두가지 방법이 모두 사용이 가능한 옵션의 체크 표시를 해두겠다.
+### 0. FROM
+이게 없으면 작동이 되지 않는다.
+그냥 기본 베이스가 되는 Docker Iamage가 뭔지 선언하는 부분이다.
 
+```
+FROM ubuntu:latest
+```
+위 와 같이 Docker처럼 선언하면 된다.
 
 ### 1. RUN
 
