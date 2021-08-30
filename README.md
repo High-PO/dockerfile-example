@@ -101,13 +101,30 @@ CMD apachectl -D FOREGROUND
 CMD ["/usr/sbin/apachectl", "-D", "FOREGROUND"]
 ```
 
-### 7. 추후 추가 예정
+### 7. ENTRYPOINT
+
+기존의 ```CMD``` 명령어와 같은 역할을 맡고있고
+차이점이 있다면 ```CMD```는 ```docker run```에서 수정이 가능하지만 ```ENTRYPOINT```는 수정이 불가능하다.
+즉 유동적이지는 않다는 말이고 꼭 최초에 실행해야만 하는 명령어가 있을때 주로 사용된다.
+
+```
+ENTRYPOINT python3 /newpy/pythonfile/main.py
+```
+### 8. WORKDIR
+
+이 컨테이너가 어디서 일을 수행할지 정해주는 것 이다.
+대표적으로 apache의 경우 /var/www/html/으로 해주면 편하다.
+
+```
+WORKDIR /var/www/html/
+```
 
 # 출처
 
 https://blog.d0ngd0nge.xyz/docker-dockerfile-write/
 
-해당 사이트를 보고 작성되었으며 작성자분께 좋은 정보 알려주셔서 감사하다는 말 올립니다.
+해당 사이트를 참고 하였습니다. 
+작성자분께 좋은 정보 알려주셔서 감사하다는 말 올립니다.
 
 
 
