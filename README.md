@@ -41,7 +41,7 @@ FROM ubuntu:latest
 
 ### 1. RUN
 
-- [x] exec, shell
+- [x] exec, shell  
 RUN은 명령어를 실행할 수 있게 해주는 옵션이다.
 패키지를 ```install```하거나 ```echo```를 통해서 상태를 보여주는 등의 셋팅을 할 수도 있다.
 
@@ -57,7 +57,7 @@ RUN apt-get install httpd -y
 ------
 
 ### 2. EXPOSE
-- [x] exec, shell
+- [x] exec, shell  
 ```EXPOSE```는 포트와 호스트를 연결할 때 사용이 된다.
 즉 포트포워딩이라고 생각하면된다.
 
